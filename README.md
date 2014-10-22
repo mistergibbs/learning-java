@@ -1,5 +1,3 @@
-learning-java
-=============
 /*
  * Array Assignment
  * 
@@ -25,9 +23,13 @@ public class Gibbs_array_assignment  // begin class
     public static void main(String[] args) throws Exception // begin main
     {
      
-readEnroll();       
-        
+String[] file = new String[100];
 int count;
+        
+count = readEnroll(file);
+
+
+
 
 count = readEnroll();
 String[] enrollment = new String[count];
@@ -77,8 +79,8 @@ System.out.println("There are " + count + " sections for CIS 103");
   * 
  /****************************************************************/
 
-public static int readEnroll(String[] lines) throws Exception       
-{ 
+public static int readEnroll(String[] lines) throws Exception       // this line creates a method that returns an integer value(the number of lines read), readEnroll and can be passed a string array 'lines'
+{   
      int count = 0; // initialize array count
 
     // Create a File class object x and give it the name of the file to read
@@ -106,7 +108,7 @@ public static int readEnroll(String[] lines) throws Exception
     // Close the input data strean and associated file
     y.close();  
     return count;
-}
+} // method
  /****************************************************************
   * 
   * end read data from array
